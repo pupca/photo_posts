@@ -1,0 +1,10 @@
+<h1>Photo</h1>
+<ul>
+	<li><%= @photo.id%></li>
+	<li><%= image_tag(@photo.photo.url, :style => "height: 500px;")%> </li>
+	<li><%= @photo.lat %></li>
+	<li><%= @photo.long %></li>
+	<li><%= @photo.date %></li>
+	<li><%= @photo.compass %></li>
+	<li><%= @photo.created_at %></li>
+</ul>

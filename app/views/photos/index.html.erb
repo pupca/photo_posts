@@ -1,0 +1,32 @@
+<h3>Photos <span class="heading_link">(<%= link_to "Create photo", new_photo_path %>)</span></h3>
+<table class="table table-striped table-hover" id="admin_data_table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Photo</th>
+			<th>Lat</th>
+			<th>Long</th>
+			<th>Taken</th>
+			<th>Compass</th>
+			<th>Created at</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @photos.each do |photo| %>
+		<tr>
+			<td><%= photo.id%></td>
+			<td><%= image_tag(photo.photo.url, :style => "height: 100px;")%> </td>
+			<td><%= photo.lat %></td>
+			<td><%= photo.long %></td>
+			<td><%= photo.date %></td>
+			<td><%= photo.compass %></td>
+			<td><%= photo.created_at %></td>
+			<td>
+				<%= link_to "<i class='icon-edit'></i>".html_safe, photo_path(photo) %>
+				<%= link_to("<i class='icon-remove'></i>".html_safe, photo_path(photo), :method => :delete, :confirm => "Do you really want to delete?") %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

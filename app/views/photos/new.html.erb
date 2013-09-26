@@ -1,0 +1,10 @@
+<h3>New Photo</h3>
+<%= simple_form_for(@photo, :html => {:class => 'form-horizontal form-vertical' }) do |f| %>
+
+	<%= f.input :photo, :as => :file %>
+
+
+
+	<%= f.button :submit, 'Add Photo', :class => 'btn-success btn-large btn-submit btn', :style => "float:none;" %>
+
+<% end %>
