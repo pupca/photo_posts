@@ -1,1 +1,15 @@
 h1. Photos
+
+$ rails server
+
+create user name and account
+
+meanwhile from command line do
+curl -F "photo[photo]=@ph.jpg" http://localhost:3001/photos.json
+
+where ph.jpg is path to your image
+
+visit 
+localhost:3000/photos
+
+and see your picture!
